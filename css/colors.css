@@ -1,0 +1,12 @@
+/* colors : usefull website link ( https://coolors.co/ ) .
+rgba(a stands for visibility)*/
+
+body {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: papayawhip;
+  color: darkblue;
+  color: rgb(219, 216, 116);
+  color: #333;
+}
