@@ -1,0 +1,115 @@
+/* //There are three main ways to link CSS with HTML. 1. External CSS 2. Internal CSS 3.Inline CSS 
+ */
+
+/* when there are multiple declarations for the same CSS property applied to the same HTML element, the last declaration will be applied */
+
+/* css declarations work based on specificity
+(id>class/attribute/pseudo class> Elements/Pseudo elements  */
+
+/* CSS selectors */
+
+/* Element Selector:The element selector selects HTML elements based on the element name (or tag) for example p, h1, div, span, etc.It's the simplest type of selector and is used to apply styles to an entire group of elements with the same tag name.Element selectors can also be combined with pseudo-classes selector  to target specific states of an element */
+
+p {
+  color: blue;
+  font-size: 30px;
+}
+
+h1 {
+  color: aliceblue;
+  background-color: gray;
+}
+
+h1:hover {
+  color: aqua;
+}
+
+h3 {
+  color: rgb(32, 207, 207);
+}
+
+/* Id Selector: In CSS, an ID selector is a type of selector that targets a specific HTML element based on its unique ID attribute. An ID selector is used to apply styles to a single element on a page, rather than a group of elements like an element selector.In general, it's recommended to use class selectors instead of ID selectors when possible, as classes can be applied to multiple elements on a page, making the styles more flexible and reusable.*/
+
+#id {
+  background-color: rgb(185, 209, 161);
+}
+
+/* class selector : a class selector is a type of selector that targets HTML elements based on the value of their class attribute. Class selectors are used to apply styles to groups of elements that share the same class name. y using classes instead of IDs, you can create more reusable and maintainable styles that can be applied to multiple elements on a page or website.*/
+
+.menu {
+  list-style: none;
+  margin: 20px;
+  padding: 20px;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.menu:hover {
+  background-color: #cbbebe;
+}
+
+/* universal selector : In CSS, the universal selector is a type of selector that targets all elements on a page. The syntax for the universal selector is simply an asterisk *, like this. 
+box-sizing: border-box means   specified width and height of an element includes the content, padding, and border.Using border-box can make it easier to create responsive layouts */
+
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* group selector : In CSS, the group selector allows you to select multiple elements and apply a common style to all of them at once. This can be useful for simplifying your code and making it easier to manage styles for related elements.  */
+
+.sakib,
+.rakib,
+#f,
+.jahidul {
+  color: rgb(194, 194, 25);
+  font-size: 20px;
+}
+
+/* Attribute Selector: Attribute selectors are a type of CSS selector that allow you to target HTML elements based on their attributes and attribute values. */
+
+a[href] {
+  color: blue;
+}
+
+/* Pseudo-Class Selector */
+
+a:hover {
+  color: red;
+}
+
+button:active {
+  background-color: blue;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  color: red;
+}
+
+li:nth-child(2) {
+  background-color: gray;
+}
+
+/* Pseudo-elements  selectors : Pseudo-elements are a special type of selectors in CSS that allows you to select and style a specific part of an element.  */
+p::after {
+  content: " - The end";
+}
+
+p::before {
+  content: "Note:";
+}
