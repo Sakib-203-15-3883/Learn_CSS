@@ -1,0 +1,139 @@
+/* box-sizing: border-box; is a CSS property that affects the way the browser calculates the size of an element. By default, the size of an element is calculated based on its content, padding, and border, with the width and height properties referring only to the content area of the element.
+
+However, when box-sizing is set to border-box, the size of the element is calculated based on its content, padding, and border together. This means that the width and height properties include the padding and border of the element, as well as the content.
+
+This can be useful in situations where you need to specify a fixed size for an element that includes its padding and border, without having to adjust the size of the element manually to account for those values.
+
+For example, suppose you have a div element with a width of 200 pixels and a padding of 10 pixels on each side, as well as a border of 2 pixels. If box-sizing is set to content-box, the total width of the element would be 200 + 10 + 10 + 2 + 2 = 224 pixels. However, if box-sizing is set to border-box, the total width of the element would be 200 pixels, and the padding and border would be included in that value. */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* In CSS, absolute and relative units are used to define the size and position of elements on a web page. 
+
+Relative units : Relative units, such as em, rem, and percentage, are defined relative to another value, usually the font-size of the parent element. They allow for responsive designs that adapt to changes in screen size and font-size.
+
+The most commonly used relative units in CSS are:
+
+em: This unit is relative to the font-size of the parent element. It is often used to set font sizes, margins, and padding.
+
+rem: This unit is relative to the font-size of the root element (usually the <html> tag). It is similar to em, but does not depend on the font size of the parent element. Rem is often used to set the size of containers, padding, and margins.
+
+
+/* In the example given, the CSS code sets the font size of all <p> elements to be 1.5 times the size of their parent element (the <body> element), which has a font-size of 16 pixels set in the first line.
+  
+  Since 1.5em is equivalent to 24 pixels in this case (1.5 * 16), this line sets the font-size of all <p> elements to be 24 pixels.
+  
+  This means that any <p> element nested inside the <body> element will have a font-size of 24 pixels unless its font-size is explicitly set to a different value. */
+p {
+  font-size: 1.5rem;
+}
+
+/* vw/vh: These units are relative to the viewport size. 1vw is equal to 1% of the viewport width, and 1vh is equal to 1% of the viewport height. They are often used to set the size of elements that should be relative to the size of the viewport, such as full-width hero images or sections.
+
+%: This unit is relative to the size of the parent element. It is often used to set the width, height, and margins of elements.
+
+These units are important to understand and use effectively in real-life projects to create responsive and flexible designs that can adapt to different screen sizes and devices. */
+
+/* em units are relative to the font-size of the parent element(nearest ancestor element), while rem units are relative to the font-size of the root element( which is typically the <html> element.) */
+
+body {
+  font-size: 16px;
+  color: #000408;
+  background-color: #acc8e5;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 5%;
+}
+
+article {
+  margin: 5% 0%;
+}
+
+p {
+  margin: 5% 0%;
+  border: 5px solid rgb(226, 141, 15);
+  padding: 5%;
+  border-radius: 50px;
+  text-align: justify;
+}
+
+.circle {
+  height: 150px;
+  width: 25%;
+  background-color: darkslateblue;
+  color: aliceblue;
+  margin: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* vh & vw: In CSS, vh and vw are units that are used to specify sizes relative to the viewport size.
+
+vh: 1vh is equal to 1% of the viewport height. For example, if the viewport height is 600px, 1vh would be equal to 6 pixels.
+vw: 1vw is equal to 1% of the viewport width. For example, if the viewport width is 800px, 1vw would be equal to 8 pixels.
+These units are useful when you want to create a responsive design that scales proportionally to the size of the viewport. For example, if you want to create a full-screen background image, you could set the height and width of the image to 100vh and 100vw, respectively, which would make it take up the entire viewport. */
+
+/* Absolute length units:Absolute units, on the other hand, are defined as fixed values and are not dependent on other elements on the page. Two examples of absolute units in CSS are pixels (px) and points (pt). These units are useful when precise control of the layout and positioning of elements is required.
+
+Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use cm (centimeters) on screen. The only value that you will commonly use is px (pixels). */
+
+/* css box model:The CSS box model is a fundamental concept that defines how elements in HTML are structured and how they are laid out on a webpage. It defines the properties that define the space occupied by an element, including its content, padding, border, and margin.
+
+The box model consists of four elements: content, padding, border, and margin. These elements are all defined relative to the content area of an element.
+
+Content:
+The content is the main area of an element where the text, images, or other media are displayed. The size of the content is defined by the width and height properties.
+
+Padding:
+Padding is the space between the content and the border. It can be defined using the padding-top, padding-right, padding-bottom, and padding-left properties. Padding is used to create space between the content and the border and to improve the readability and visual appeal of the element.
+
+Border:
+The border is the line that surrounds the element's content and padding. It can be defined using the border-top, border-right, border-bottom, and border-left properties. Borders can be used to add visual interest to an element, and to create a separation between elements on a webpage.
+
+Margin:
+Margins are the space between the border of an element and the border of the next element. They can be defined using the margin-top, margin-right, margin-bottom, and margin-left properties. Margins are used to create space between elements and to control the layout of the webpage.
+
+In CSS, the box model can be modified by changing the values of the properties related to each element. For example, the width property defines the width of the content area, while the padding property defines the size of the padding area around the content.
+
+The box model is an important concept in CSS because it allows designers to control the layout and spacing of elements on a webpage. By understanding the box model and how it works, designers can create more attractive and user-friendly webpages. */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+h1 {
+  font-size: 4vw;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
