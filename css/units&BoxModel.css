@@ -78,7 +78,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-
+/*  */
 /* vh & vw: In CSS, vh and vw are units that are used to specify sizes relative to the viewport size.
 
 vh: 1vh is equal to 1% of the viewport height. For example, if the viewport height is 600px, 1vh would be equal to 6 pixels.
