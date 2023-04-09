@@ -39,6 +39,17 @@ These units are important to understand and use effectively in real-life project
 
 /* em units are relative to the font-size of the parent element(nearest ancestor element), while rem units are relative to the font-size of the root element( which is typically the <html> element.) */
 
+/*  */
+/* vh & vw: In CSS, vh and vw are units that are used to specify sizes relative to the viewport size.
+
+vh: 1vh is equal to 1% of the viewport height. For example, if the viewport height is 600px, 1vh would be equal to 6 pixels.
+vw: 1vw is equal to 1% of the viewport width. For example, if the viewport width is 800px, 1vw would be equal to 8 pixels.
+These units are useful when you want to create a responsive design that scales proportionally to the size of the viewport. For example, if you want to create a full-screen background image, you could set the height and width of the image to 100vh and 100vw, respectively, which would make it take up the entire viewport. */
+
+/* Absolute length units:Absolute units, on the other hand, are defined as fixed values and are not dependent on other elements on the page. Two examples of absolute units in CSS are pixels (px) and points (pt). These units are useful when precise control of the layout and positioning of elements is required.
+
+Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use cm (centimeters) on screen. The only value that you will commonly use is px (pixels). */
+
 body {
   font-size: 16px;
   color: #000408;
@@ -60,6 +71,7 @@ p {
   padding: 5%;
   border-radius: 50px;
   text-align: justify;
+  border-style: groove;
 }
 
 .circle {
@@ -78,29 +90,46 @@ p {
   justify-content: center;
   align-items: center;
 }
-/*  */
-/* vh & vw: In CSS, vh and vw are units that are used to specify sizes relative to the viewport size.
 
-vh: 1vh is equal to 1% of the viewport height. For example, if the viewport height is 600px, 1vh would be equal to 6 pixels.
-vw: 1vw is equal to 1% of the viewport width. For example, if the viewport width is 800px, 1vw would be equal to 8 pixels.
-These units are useful when you want to create a responsive design that scales proportionally to the size of the viewport. For example, if you want to create a full-screen background image, you could set the height and width of the image to 100vh and 100vw, respectively, which would make it take up the entire viewport. */
+/* css box model:The CSS box model is a fundamental concept that defines how elements in HTML are structured and how they are laid out on a webpage. It defines the properties that define the space occupied by an element, including its content, padding, border, and margin. if an element has the background color it will be visible through its padding area. The margin area is always remain transparent, it is not affected by the element's background color, however, it causes the background color of the parent element to be seen through it.
 
-/* Absolute length units:Absolute units, on the other hand, are defined as fixed values and are not dependent on other elements on the page. Two examples of absolute units in CSS are pixels (px) and points (pt). These units are useful when precise control of the layout and positioning of elements is required.
-
-Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use cm (centimeters) on screen. The only value that you will commonly use is px (pixels). */
-
-/* css box model:The CSS box model is a fundamental concept that defines how elements in HTML are structured and how they are laid out on a webpage. It defines the properties that define the space occupied by an element, including its content, padding, border, and margin.
 
 The box model consists of four elements: content, padding, border, and margin. These elements are all defined relative to the content area of an element.
 
 Content:
-The content is the main area of an element where the text, images, or other media are displayed. The size of the content is defined by the width and height properties.
+The content is the main area of an element where the text, images, or other media are displayed. The size of the content is defined by the width and height properties. if we apply box-sizing: border-box; then the width and height properties include the padding and border of the element, as well as the content.
 
 Padding:
-Padding is the space between the content and the border. It can be defined using the padding-top, padding-right, padding-bottom, and padding-left properties. Padding is used to create space between the content and the border and to improve the readability and visual appeal of the element.
+Padding is the space between the content and the border. It can be defined using the padding-top, padding-right, padding-bottom, and padding-left properties. Padding is used to create space between the content and the border and to improve the readability and visual appeal of the element.if you set the background color for an element it will be visible through the padding area.if you set the width of a <div> element to 100% and also apply left right padding or border on it, the horizontal scrollbar will appear.to solve this we use box-sizing: border-box; Example:
 
+div {
+    width: 100%;
+    padding: 25px;
+} 
+
+div {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+}*/
+
+.padding {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: none;
+}
+
+/*
 Border:
 The border is the line that surrounds the element's content and padding. It can be defined using the border-top, border-right, border-bottom, and border-left properties. Borders can be used to add visual interest to an element, and to create a separation between elements on a webpage.
+
+
+property(border-style) : property value(none, hidden, solid, dashed, dotted, double, inset, outset, groove, and ridge)
+
+
 
 Margin:
 Margins are the space between the border of an element and the border of the next element. They can be defined using the margin-top, margin-right, margin-bottom, and margin-left properties. Margins are used to create space between elements and to control the layout of the webpage.
