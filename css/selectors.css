@@ -1,10 +1,12 @@
+/* https://specificity.keegan.st/ */
+
 /* //There are three main ways to link CSS with HTML. 1. External CSS 2. Internal CSS 3.Inline CSS 
  */
 
 /* when there are multiple declarations for the same CSS property applied to the same HTML element, the last declaration will be applied */
 
 /* css declarations work based on specificity
-(id>class/attribute/pseudo class> Elements/Pseudo elements  */
+(id>class/attribute/pseudo class> Elements/Pseudo elements > universal selectors */
 
 /* CSS selectors */
 
@@ -34,7 +36,7 @@ h3 {
   background-color: rgb(185, 209, 161);
 }
 
-/* class selector : a class selector is a type of selector that targets HTML elements based on the value of their class attribute. Class selectors are used to apply styles to groups of elements that share the same class name. y using classes instead of IDs, you can create more reusable and maintainable styles that can be applied to multiple elements on a page or website.*/
+/* class selector : a class selector is a type of selector that targets HTML elements based on the value of their class attribute. Class selectors are used to apply styles to groups of elements that share the same class name.  using classes instead of IDs, you can create more reusable and maintainable styles that can be applied to multiple elements on a page or website.*/
 
 .menu {
   list-style: none;
@@ -80,7 +82,7 @@ box-sizing: border-box means   specified width and height of an element includes
 /* Attribute Selector: Attribute selectors are a type of CSS selector that allow you to target HTML elements based on their attributes and attribute values. */
 
 a[href] {
-  color: blue;
+  color: rgb(236, 236, 240);
 }
 
 /* Pseudo-Class Selector */

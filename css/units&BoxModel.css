@@ -30,9 +30,6 @@ Font-size: 1.2em = 31.104px
 
 
 
-
-
-
 rem: This unit is relative to the font-size of the root element (usually the <html> tag). It is similar to em, but does not depend on the font size of the parent element. Rem is often used to set the size of containers, padding, and margins.
 
 
@@ -43,7 +40,7 @@ As a result, the value will not vary depending on the depth of the element in th
 
 /* In the example given, the CSS code sets the font size of all <p> elements to be 1.5 times the size of their parent element (the <body> element), which has a font-size of 16 pixels set in the first line.
   
-  Since 1.5em is equivalent to 24 pixels in this case (1.5 * 16), this line sets the font-size of all <p> elements to be 24 pixels.
+  Since 1.5rem is equivalent to 24 pixels in this case (1.5 * 16), this line sets the font-size of all <p> elements to be 24 pixels.
   
   This means that any <p> element nested inside the <body> element will have a font-size of 24 pixels unless its font-size is explicitly set to a different value. */
 p {
