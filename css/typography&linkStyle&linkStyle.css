@@ -1,0 +1,205 @@
+/* www.tutorialrepublic.com */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Typography : in CSS, typography refers to the art and technique of arranging type (or text) to make it more readable, legible, and visually appealing.
+
+1. color
+
+2. font-family( You may use google fonts )
+
+3. font-size(units)
+
+4. font-style(oblique,normal,italic)
+
+5. font-variant(small-caps, normal)
+
+6. font-weight(normal,bold,600.....)
+
+7. letter-spacing(normal, 2px,0.1em ......)
+
+8. line-height( 1.6 recomended)
+
+9. text-align(justify , center, left ,right)
+
+10. text-decoration(none, underline)
+
+11. text-indent(0px,40px , -2em   .......)
+
+12.text-overflow( ellipsis)
+
+13. text-transform(upercase,lowercase)
+
+14. word-spacing(normal,5px,2em)
+*/
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  line-height: 1.6;
+  font-style: oblique;
+  font-variant: small-caps;
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+}
+
+p {
+  /* the line-height value is often dependent on the font size.if the font size of a paragraph is set to 16 pixels, then each line within that paragraph will have a height of 24 pixels (16 x 1.5).  */
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: justify;
+  text-decoration: none;
+  text-indent: 40px;
+}
+
+.div {
+  margin: 5%;
+  border: 5px solid black;
+  padding: 5%;
+}
+
+.p {
+  padding: 3%;
+}
+
+/* Link Style : A link has four different states — link, visited, active and hover. These four states of a link can be styled differently through using the following anchor pseudo-class selectors.
+
+a:link — define styles for normal or unvisited links.
+a:visited — define styles for links that the user has already visited.
+a:hover — define styles for a link when the user place the mouse pointer over it.
+a:active — define styles for links when they are being clicked.*/
+
+a {
+  display: block;
+  margin: 5%;
+}
+
+/* unvisited link */
+a:link {
+  color: #1ebba3;
+}
+
+/* visited link */
+a:visited {
+  color: #ff00f4;
+}
+
+/* mouse over link */
+a:hover {
+  color: #a766ff;
+}
+
+/* active link */
+a:active {
+  color: #ff9800;
+}
+
+a:focus {
+  color: rgb(4, 170, 241);
+}
+
+/*  create a link like a button */
+a:link,
+a:visited {
+  color: white;
+  background-color: #1ebba3;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #099983;
+  text-decoration: none;
+  text-align: center;
+  font: 14px Arial, sans-serif;
+}
+
+a:hover,
+a:active {
+  background-color: #9c6ae1;
+  border-color: #7443b6;
+}
+
+/* list Style : 
+1. Changing the Marker Type of Lists
+
+  By default, items in an ordered list are numbered with Arabic numerals (1, 2, 3, 5, and so on), whereas in an unordered list, items are marked with round bullets (•).
+
+  But, you can change this default list marker type to any other type such as roman numerals, latin letters, circle, square, and so on using the   property.
+  
+    list-style-type:(square,upper-roman);
+
+
+2. Changing the Position of List Markers
+  by default outside 
+
+    list-style-position:(inside,outside );
+
+3. Using Images as List Markers
+
+  ometimes, the list-style-image property may not produce the expected output. Alternatively, you can use the following solution for better control over the positioning of image markers.
+
+4. Setting All List Properties At Once
+  The list-style property is a shorthand property for defining all the three properties list-style-type, list-style-image, and list-style-position of a list in one place.
+    
+    ul {
+    list-style: square inside url("images/bullet.png");
+    }
+
+5. Creating Navigation Menus Using Lists
+
+The following style rule sets all the list properties in a single declaration.
+
+
+    list-style-image: url("images/bullet.png");
+*/
+
+header {
+  background-color: black;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav {
+  margin: 0% 5%;
+}
+
+.ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.li {
+  margin: 10px;
+  list-style: none;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding: 5px;
+  color: cornflowerblue;
+}
+
+header h2 {
+  color: rgb(234, 82, 112);
+}
+
+.olStyle {
+  margin: 5%;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  list-style-position: inside;
+}
+
+.ulStyle {
+  margin: 5%;
+  font-size: 1.5rem;
+  line-height: 1.6;
+
+  list-style: square outside url("images/bullet.png");
+}

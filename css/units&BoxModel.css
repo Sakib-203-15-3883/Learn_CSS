@@ -17,9 +17,28 @@ Relative units : Relative units, such as em, rem, and percentage, are defined re
 
 The most commonly used relative units in CSS are:
 
-em: This unit is relative to the font-size of the parent element. It is often used to set font sizes, margins, and padding.
+
+/* em: This unit is relative to the font-size of the parent element. It is often used to set font sizes, margins, and padding.
+
+em units are relative to the font-size of the parent element(nearest ancestor element), while rem units are relative to the font-size of the root element( which is typically the <html> element.) 
+
+Example : Given example represents the value will cascade .
+
+Font-size: 1.2em = 21.6px
+Font-size: 1.2em = 25.92px
+Font-size: 1.2em = 31.104px
+
+
+
+
+
 
 rem: This unit is relative to the font-size of the root element (usually the <html> tag). It is similar to em, but does not depend on the font size of the parent element. Rem is often used to set the size of containers, padding, and margins.
+
+
+
+rem values: The value is relative to the root element's font-size, which is the <html> element.(16px)
+As a result, the value will not vary depending on the depth of the element in the HTML hierarchy, and will reamin context independent.
 
 
 /* In the example given, the CSS code sets the font size of all <p> elements to be 1.5 times the size of their parent element (the <body> element), which has a font-size of 16 pixels set in the first line.
@@ -33,11 +52,9 @@ p {
 
 /* vw/vh: These units are relative to the viewport size. 1vw is equal to 1% of the viewport width, and 1vh is equal to 1% of the viewport height. They are often used to set the size of elements that should be relative to the size of the viewport, such as full-width hero images or sections.
 
-%: This unit is relative to the size of the parent element. It is often used to set the width, height, and margins of elements.
+%: The value is relative to the parent's font-size .  This unit is relative to the size of the parent element. It is often used to set the width, height, and margins of elements.
 
 These units are important to understand and use effectively in real-life projects to create responsive and flexible designs that can adapt to different screen sizes and devices. */
-
-/* em units are relative to the font-size of the parent element(nearest ancestor element), while rem units are relative to the font-size of the root element( which is typically the <html> element.) */
 
 /*  */
 /* vh & vw: In CSS, vh and vw are units that are used to specify sizes relative to the viewport size.
@@ -123,16 +140,31 @@ div {
 }
 
 /*
+
 Border:
 The border is the line that surrounds the element's content and padding. It can be defined using the border-top, border-right, border-bottom, and border-left properties. Borders can be used to add visual interest to an element, and to create a separation between elements on a webpage.
 
 
 property(border-style) : property value(none, hidden, solid, dashed, dotted, double, inset, outset, groove, and ridge)
 
+property(border-width ) : property value(units)
+
+The border CSS property is a shorthand property for setting one or more of the individual border properties border-width, border-style and border-color in a single rule.
+
 
 
 Margin:
+
 Margins are the space between the border of an element and the border of the next element. They can be defined using the margin-top, margin-right, margin-bottom, and margin-left properties. Margins are used to create space between elements and to control the layout of the webpage.
+
+An element's margin is not affected by its background-color, it is always transparent. However, if the parent element has the background color it will be visible through its margin area.
+
+The auto value for the margin property tells the web browser to automatically calculate the margin. This is commonly used to center an element horizontally within a larger container.
+div {
+    width: 300px;
+    background: gray;
+    margin: 0 auto;
+}
 
 In CSS, the box model can be modified by changing the values of the properties related to each element. For example, the width property defines the width of the content area, while the padding property defines the size of the padding area around the content.
 
