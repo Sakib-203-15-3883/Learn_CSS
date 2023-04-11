@@ -1,0 +1,43 @@
+/* css-tricks.com */
+
+/* Properties for the Parent : (flex container)
+
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+p {
+  margin: 5%;
+}
+
+h2 {
+  margin: 5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 33.33%;
+  justify-content: space-between;
+}
+
+.item {
+  background-color: steelblue;
+  color: #fff;
+  margin: 5%;
+  padding: 5%;
+}
