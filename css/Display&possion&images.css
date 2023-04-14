@@ -2,6 +2,95 @@
 
 /* https://www.javatpoint.com/css-images */
 
+/* position:
+
+By default, the position property for all HTML elements in CSS is set to static.
+
+position: relative works the same way as position: static;, but it lets you change an element's position.position: relative; changes the position of the element relative to the parent element and relative to itself and where it would usually be in the regular document flow of the page. This means that it's relative to its original position within the parent element.
+
+position:absolute . 
+They are not positioned based on their usual place in the document flow, but based on the position of their ancestor.
+
+If you want the coordinates to be applied to its parent element, you need to relatively position the parent element.
+
+
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-size: 1.6;
+}
+
+/* position parrt */
+
+.position-header {
+  display: flex;
+  height: 10%;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  background-color: antiquewhite;
+  font-size: 2rem;
+  position: fixed;
+}
+
+.position-nav {
+  display: flex;
+
+  list-style: none;
+  column-gap: 10%;
+}
+
+.main-div {
+  background-color: azure;
+  color: black;
+  margin: 5%;
+  height: 250px;
+}
+
+.nested-1 {
+  display: flex;
+  margin: 5%;
+  background-color: rgb(191, 218, 209);
+  /* position: relative; */
+}
+
+.nested-2-div1 {
+  height: 100px;
+  width: 25%;
+  background-color: burlywood;
+  margin: 5%;
+  padding: 5%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+.nested-2-div2 {
+  height: 100px;
+  width: 25%;
+  background-color: burlywood;
+  margin: 5%;
+  padding: 5%;
+  position: relative;
+  bottom: 50px;
+}
+
+.nested-2-div3 {
+  height: 100px;
+  width: 25%;
+  background-color: burlywood;
+  margin: 5%;
+  padding: 5%;
+  position: sticky;
+}
+
 /* 
 display: block;
 display: inline;
@@ -41,18 +130,7 @@ This also means that devices like screen readers, which make websites accessible
 Visibility hidden leaves the space .
 */
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
-  font-size: 1.6;
-}
-
+/* display part */
 .display-H {
   margin: 5% 30%;
   padding: 5% 10%;
