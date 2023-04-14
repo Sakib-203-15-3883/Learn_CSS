@@ -1,0 +1,230 @@
+/* https://www.freecodecamp.org/news/the-css-display-property-display-none-display-table-inline-block-and-more/ */
+
+/* https://www.javatpoint.com/css-images */
+
+/* 
+display: block;
+display: inline;
+display: inline-block;
+display: flex;
+display: inline-flex;
+display: grid;
+display: inline-grid;
+display: flow-root; */
+
+/*
+display: inline
+
+An element with a display property set to inline will not start on a new line and it will take up the remaining/available screen width. It just takes up the space such an element would normally take.
+
+Because of this, you can't set the width and height of an element that has a display of inline, becuase it does not take up the whole screen width.
+
+Some elements are inline by default, like <span>, <a>, <i>, and <img>. */
+/* 
+
+display: block
+An element that has the display property set to block starts on a new line and takes up the available screen width.
+
+You can specify the width and height properties for such elements.
+*/
+
+/* display: inline-block
+
+An element you assign a display of inline-block is inline by presentation. But it has the added advantage of you being able to apply width and height to it, which you can't do when the element is assigned a dispaly of inline. */
+
+/*
+display: none
+When you set the display property of an element to none, the element is completely taken off the page and it doesn’t have an effect on the layout.
+
+This also means that devices like screen readers, which make websites accessible to blind people, wont't have access to the element. 
+
+Visibility hidden leaves the space .
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-size: 1.6;
+}
+
+.display-H {
+  margin: 5% 30%;
+  padding: 5% 10%;
+  border: 5px black solid;
+  background-color: azure;
+  width: 50%;
+}
+p {
+  margin: 5%;
+  padding: 5%;
+  border: 2px blue solid;
+  display: inline-block;
+  background-color: rgb(146, 123, 87);
+  color: aliceblue;
+}
+
+.div-inline {
+  margin: 5%;
+  padding: 10% 5%;
+  border: 2px blue solid;
+  background-color: rgb(146, 123, 87);
+  color: aliceblue;
+  height: 300px;
+}
+
+.div-inline span {
+  background-color: azure;
+  color: black;
+  display: inline;
+  /*  height: 200px;
+  width: 200px; it,s not work with inline element */
+  padding: 0 20px;
+}
+
+.div-block {
+  margin: 5%;
+  padding: 10% 5%;
+  border: 2px blue solid;
+  background-color: rgb(55, 59, 57);
+  color: rgb(225, 228, 231);
+  height: 500px;
+}
+
+.div-block span {
+  background-color: azure;
+  color: black;
+  display: block;
+  margin: 4%;
+  padding: 15% 5%;
+  height: 50px;
+  width: 400px;
+
+  padding: 0 20px;
+}
+
+.div-inline-block {
+  margin: 5%;
+  padding: 10% 5%;
+  border: 2px blue solid;
+  background-color: rgb(238, 236, 231);
+  color: rgb(9, 9, 9);
+  height: 300px;
+}
+
+.div-inline-block span {
+  background-color: azure;
+  color: black;
+  display: inline-block;
+  height: 100px;
+  width: 500px;
+
+  padding: 0 20px;
+}
+
+.div-none {
+  margin: 5%;
+  padding: 10% 5%;
+  border: 2px blue solid;
+  background-color: rgb(58, 43, 3);
+  color: rgb(255, 251, 251);
+  height: 300px;
+}
+
+.div-none span {
+  background-color: azure;
+  color: black;
+  display: none;
+  height: 100px;
+  width: 500px;
+  padding: 0 20px;
+}
+
+/* images part */
+
+/* https://www.javatpoint.com/css-images */
+
+/* 
+1. Transparent image: To make an image transparent, we have to use the opacity property. The value of this property lies between 0.0 to 1.0, respectively. 
+
+2. Rounded image:The border-radius property sets the radius of the bordered image. It is used to create the rounded images. The possible values for the rounded corners are given as follows:
+
+border-radius: It sets all of the four border-radius property.
+border-top-right-radius: It sets the border of the top-right corner.
+border-top-left-radius: It sets the border of the top-left corner.
+border-bottom-right-radius: It sets the border of the bottom-right corner.
+border-bottom-left-radius: It sets the border of the bottom-left corner.
+
+
+
+3. Responsive Image:
+max-width:100%;  
+height:auto;
+
+4. Center an Image: We can center an image by using the left-margin and right-margin property. We have to set these properties to auto in order to make a block element.
+*/
+
+/* The background-image:  CSS property allows you to then place the image behind any HTML element you wish. 
+
+1. Background Repeat: When you apply a background image to an element, by default it will repeat itself.
+
+    background-repeat: repeat/no-repeat/repeat-x/ repeat-y ;
+
+2.  Background Position: 20px 30px/ right center;
+
+3. background-size:cover/contain
+
+4. background-image: linear-gradient(to left,pink,orange);
+
+
+*/
+
+.image-H {
+  margin: 5% 30%;
+  padding: 5% 10%;
+  border: 5px black solid;
+  background-color: azure;
+  width: 50%;
+  background-image: url(/images/image\ 4.png);
+  background-repeat: repeat-x;
+}
+
+.img1 {
+  height: 400px;
+  width: 50%;
+  margin: 10% 20%;
+  opacity: 0.6;
+  border-radius: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+.img2 {
+  height: 400px;
+  width: 50%;
+  margin: 10% 20%;
+  max-width: 100%;
+  height: auto;
+}
+
+.img3 {
+  height: 400px;
+  width: 50%;
+  margin: 10% 20%;
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  margin: 5% 12.5%;
+  padding: 5% 30%;
+  font-size: 3rem;
+  line-height: 1.6;
+  background-color: antiquewhite;
+  width: 80%;
+}
